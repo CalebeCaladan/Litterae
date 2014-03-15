@@ -1,0 +1,27 @@
+<%= form_for(@wording) do |f| %>
+<!--  <% if @wording.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@wording.errors.count, "error") %> prohibited this wording from being saved:</h2>
+
+      <ul>
+      <% @wording.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+    </div>
+  <% end %>
+-->
+    <form class="form-horizontal">
+      <div class="form-group">
+    <%= f.label :title%>
+    <%= f.text_field :title, class: 'form-control' %><br>
+
+    <%= f.bootsy_area :text, class: 'form-control', size: "70x12" %><br>
+
+    <%= f.label :category %>
+    <%= f.collection_select :category_id , Category.all, :id, :name, {prompt: "Select a category"}, {class: "form-control"}%><br>
+    <br><%= f.submit class: 'btn btn-default' %>
+      </div>
+    </form>
+<% end %>

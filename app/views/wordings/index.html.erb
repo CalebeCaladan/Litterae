@@ -1,0 +1,30 @@
+<h1>Wording</h1>
+
+<hr class="soften">
+
+<% @wordings.each do |wording| %>
+<div id="wording">
+   <div class="post well-custon">
+      <div class="imagem">
+        <img src="<%= wording.user.image %>" name="imagem" width="80" height="80" class="img-circle">
+      </div>
+      <div class="infos">
+        <h3><%= link_to wording.title, wording%></h3>
+        In <%= wording.category.name %>
+      </div>
+      <div class="pull-right">
+      <%= pluralize wording.reputation_for(:votes).to_i, "vote" %> |
+      <%= link_to "up", vote_wording_path(wording, type: "up"), method: "post" %> |
+      <%= link_to "down", vote_wording_path(wording, type: "down"), method: "post" %>
+      </div>
+  </div></br>
+</div>
+<% end %>
+
+
+<hr class="soften">
+<% if current_user %>
+  <%= link_to 'New Wording', new_wording_path %>
+  <% else %>
+  <p>You need log in to post!</p>
+<% end %>
