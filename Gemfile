@@ -42,6 +42,7 @@ gem 'bootsy'
 gem 'activerecord-reputation-system', github: 'NARKOZ/activerecord-reputation-system', branch: 'rails4'
 
 group :production do
+  gem 'rails_12factor'
   gem 'pg'
 end
 group :doc do
