@@ -4,14 +4,11 @@
 
       <p>Ops! Nos temos <%= pluralize(@wording.errors.count, "erro") %></p>
 
-
       <% @wording.errors.full_messages.each do |msg| %>
       <div class="alert alert-danger">
         <%= msg %>
       </div>
       <% end %>
-
-
 <% end %>
 
 
@@ -20,7 +17,7 @@
     <%= f.label :title%>
     <%= f.text_field :title, class: 'form-control' %><br>
 
-    <%= f.bootsy_area :text, class: 'form-control', size: "70x12" %><br>
+    <%= f.bootsy_area :text, class: 'form-control', size: "70x12", editor_options: {font_styles: false, color: false} %><br>
 
     <%= f.label :category %>
     <%= f.collection_select :category_id , Category.all, :id, :name, {prompt: "Select a category"}, {class: "form-control"}%><br>
