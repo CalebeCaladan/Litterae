@@ -1,0 +1,25 @@
+pt-BR:
+  wordings:
+    new: Nova
+  links:
+    back: Voltar
+  activerecord:
+    models:
+      category: Categoria
+      wording: Resenha
+      user: Usuário
+    attributes:
+      category:
+        name: Nome
+      user:
+        provider: Provedor
+        name: Nome
+        image: Imagem
+        description: Descrição
+      wording:
+
+        category: Categoria
+        title: Título
+        text: Conteudo
+        intro: Introdução
+

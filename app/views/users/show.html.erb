@@ -1,12 +1,12 @@
-<h1>User profile</h1>
+<h1>Perfil do usuario</h1>
 <hr class="soften">
 <div class="pull-left">
 <p><%= @user.name %></p>
 </div>
 <div class="pull-right">
-<p><%= @user.wordings.length %> Wordings</p>
+<p><%= @user.wordings.length %> Resenhas</p>
 </div>
-<h2>Your wordings</h2>
+<h2>Suas resenhas</h2>
 <hr class="soften">
 <% @user.wordings.each do |wording| %>
   <div class="post well-custon">
