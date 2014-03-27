@@ -13,7 +13,7 @@
         Em <%= wording.category.name %>
       </div>
       <div class="pull-right">
-      <%= pluralize wording.reputation_for(:votes).to_i, "vote" %> |
+      <%= pluralize wording.reputation_for(:votes).to_i, "voto" %> |
       <%= link_to "up", vote_wording_path(wording, type: "up"), method: "post" %> |
       <%= link_to "down", vote_wording_path(wording, type: "down"), method: "post" %>
       </div>

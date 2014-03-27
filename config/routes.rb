@@ -1,7 +1,7 @@
 Litterae02::Application.routes.draw do
 
-  get "static_page/bemvindo"
-  get "static_page/help"
+  get "static_page/bemvindo", path: 'boasvindas'
+  get "static_page/help", path: 'ajuda'
   mount Bootsy::Engine => '/bootsy', as: 'bootsy'
   resources :users
   resources :categories
