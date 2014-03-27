@@ -1,9 +1,21 @@
 <h1> Textos em <%= @category.name %> </h1>
 <% @category.wordings.each do |wordings| %>
-
-  <b><%= wordings.title %></b><br>
-  <p><%= wordings.text %></p>
-
+  <div id="wording">
+     <div class="post well-custon">
+        <div class="imagem">
+          <img src="<%= wordings.user.image %>" name="imagem" width="80" height="80" class="img-circle">
+        </div>
+        <div class="infos">
+          <h3><%= link_to wordings.title, wordings%></h3>
+          In <%= wordings.category.name %>
+        </div>
+        <div class="pull-right">
+        <%= pluralize wordings.reputation_for(:votes).to_i, "vote" %> |
+        <%= link_to "up", vote_wording_path(wordings, type: "up"), method: "post" %> |
+        <%= link_to "down", vote_wording_path(wordings, type: "down"), method: "post" %>
+        </div>
+    </div></br>
+  </div>
 <% end %>
 
 <%= link_to "Escreva também!", new_wording_path %>

@@ -39,7 +39,7 @@ class WordingsController < ApplicationController
   end
 
   def update
-    @wording = current_user.wording.find(params[:id])
+    @wording = current_user.wordings.find(params[:id])
     respond_to do |format|
       if @wording.update(wording_params)
         format.html { redirect_to @wording, notice: 'Wording was successfully updated.' }

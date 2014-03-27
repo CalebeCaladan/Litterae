@@ -208,6 +208,11 @@ margin-bottom: 72px;
 
 .post{
   .imagem{
+    border: 4px solid #fff;
+    -webkit-box-shadow: 0 0 2px 0 #808080;
+    box-shadow: 0 0 2px 0 #808080;
+    border-radius: 600px;
+    -webkit-border-radius: 600px;
     float: left;
     margin-right: 20px;
   }

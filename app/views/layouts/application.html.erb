@@ -12,14 +12,19 @@
 </head>
   <body>
     <%= render 'layouts/header' %>
-    <div class="container col-md-7 col-md-offset-1 main">
-    <%= yield %>
-    </div>
 
     <% if current_user %>
+      <div class="container col-md-7 col-md-offset-1 main">
+      <%= yield %>
+      </div>
+
       <div class="container profile col-md-3">
       <%= render 'layouts/profile' %>
       </div>
+      <% else %>
+        <div class="container col-md-10 col-md-offset-1 main">
+        <%= yield %>
+        </div>
     <% end %>
 
 
