@@ -10,7 +10,7 @@
       </div>
       <div class="infos">
         <h3><%= link_to wording.title, wording%></h3>
-        In <%= wording.category.name %>
+        Em <%= wording.category.name %>
       </div>
       <div class="pull-right">
       <%= pluralize wording.reputation_for(:votes).to_i, "vote" %> |

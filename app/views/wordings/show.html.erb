@@ -16,5 +16,7 @@
   <%= @wording.user.name %>
 </p>
 
-<%= link_to 'Editar', edit_wording_path(@wording) %> |
-<%= link_to 'Voltar', wordings_path %>
+<% if current_user = @wording.user.id %>
+  <%= link_to 'Editar', edit_wording_path(@wording) %>
+<% end %>
+
