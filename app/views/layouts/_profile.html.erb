@@ -8,10 +8,14 @@
     <div class="bs-docs-sidebar hidden-print affix-top" role="complementary">
           <ul class="nav bs-docs-sidenav">
                 <li>
-                  <%= link_to "Eu quero escrever!", new_wording_path %>
+                  <%= link_to new_wording_path do %>
+                  <i class="fa fa-pencil-square-o fa-fw"></i> Eu quero escrever!
+                  <% end %>
                 </li>
                 <li>
-                  <%= link_to "Minhas resenhas", current_user %>
+                  <%= link_to current_user do %>
+                  <i class="fa fa fa-check-square-o fa-fw"></i> Minhas resenhas!
+                  <% end %>
                 </li>
           </ul>
     </div>

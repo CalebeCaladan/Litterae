@@ -89,15 +89,22 @@ a:hover {
 
 /* Foootter */
 
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border: 1px solid #eaeaea;
-  color: #999;
+.bs-docs-footer {
+  margin-top: 20px;
+  clear:both;
+  padding-bottom: 1em;
+  padding-top: 2em;
+  border-top: 1px solid  #e5e5e5;
+  position: relative;
 }
 
-footer a {
-  color: #555;
+.bs-docs-footer-links li {
+display: inline;
+padding: 0 2px;
+}
+
+.container-footer{
+  text-align: center;
 }
 
 footer small {
@@ -105,13 +112,12 @@ footer small {
 }
 
 footer ul {
-  float: right;
+  margin-right: auto;
   list-style: none;
 }
 
 footer ul li {
-  float: left;
-  margin-left: 10px;
+  margin-left: auto;
 }
 
 .profile {
